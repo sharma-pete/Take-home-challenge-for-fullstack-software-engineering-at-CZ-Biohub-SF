@@ -3,10 +3,11 @@ const mysql = require('mysql')
 function connectToDB() {
     const conn = mysql.createConnection(
         {
+            //local DB credentials
             host:'localhost',
-            user: 'root',
-            password: 'abcd1234',
-            database: 'takeHomeChallangeDB'
+            user: 'username',
+            password: 'password',
+            database: 'databasename'
         }
     )    
     console.log('Trying to connect to the DB')
