@@ -1,0 +1,26 @@
+{
+  "name": "take-home-challenge-for-fullstack-software-engineering-at-cz-biohub-sf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sharma-pete/Take-home-challenge-for-fullstack-software-engineering-at-CZ-Biohub-SF.git"
+  },
+  "author": "Pete Sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sharma-pete/Take-home-challenge-for-fullstack-software-engineering-at-CZ-Biohub-SF/issues"
+  },
+  "homepage": "https://github.com/sharma-pete/Take-home-challenge-for-fullstack-software-engineering-at-CZ-Biohub-SF#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1"
+  }
+}
