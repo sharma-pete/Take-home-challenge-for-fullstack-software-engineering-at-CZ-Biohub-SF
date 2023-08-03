@@ -4,34 +4,44 @@ function computeFullFiboSequence(num) {
     if( typeof(num) === undefined ) throw "input number is required"
     if( num < 1 ) throw "input number should be positive"
 
-    var fibArraay = [0,1]
-    for ( var i = fibArraay.length; i<num; i ++) {
-        fibArraay[i] = fibArraay[i -2] + fibArraay[i-1]
+    var fibArray = [0,1]
+    for ( var i = fibArray.length; i<num; i ++) {
+        fibArray[i] = fibArray[i -2] + fibArray[i-1]
     }
 
-    return fibArraay
+    return fibArray
 }
 
-function computePartialFiboSequence(fibArraay, num) {
+function computePartialFiboSequence(fibArray, num) {
 
     if( typeof(num) === undefined ) throw "input number is required"
     if( num < 1 ) throw "input number should be positive"
 
-    for ( var i = fibArraay.length; i<num; i ++) {
-        fibArraay[i] = fibArraay[i -2] + fibArraay[i-1]
+    var useArray = []
+    for ( var i =0; i < fibArray.length; i++) {
+        useArray.push(parseInt(fibArray[i]))
     }
 
-    return fibArraay
+    for ( var i = useArray.length; i<num; i ++) {
+        useArray[i] = useArray[i -2] + useArray[i-1]
+    }
+
+    return useArray
 }
 
 function fetchComputedFiboSequence(fibArray, num){
 
+    var useArray = []
+    for ( var i =0; i < fibArray.length; i++) {
+        useArray.push(parseInt(fibArray[i]))
+    }
+
     if( typeof(num) === undefined ) throw "input number is required"
     if( num < 1 ) throw "input number should be positive"
 
-    var smallFibArraay = fibArray.slice(0,num)
+    var smallFibArray = useArray.slice(0,num)
 
-    return smallFibArraay
+    return smallFibArray
 }
 
 module.exports = {
