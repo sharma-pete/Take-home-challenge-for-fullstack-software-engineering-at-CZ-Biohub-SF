@@ -1,38 +1,40 @@
-
+//function to compute fibonacci sequence from 0 to num
 function computeFullFiboSequence(num) {
 
     if( typeof(num) === undefined ) throw "input number is required"
     if( num < 1 ) throw "input number should be positive"
 
     var fibArray = [0,1]
-    for ( var i = fibArray.length; i<num; i ++) {
+    for ( var i = fibArray.length; i<num; i ++ ) {
         fibArray[i] = fibArray[i -2] + fibArray[i-1]
     }
 
     return fibArray
 }
 
+// function to compute fibonacci sequence from an existing smaller array to greater number n
 function computePartialFiboSequence(fibArray, num) {
 
     if( typeof(num) === undefined ) throw "input number is required"
     if( num < 1 ) throw "input number should be positive"
 
     var useArray = []
-    for ( var i =0; i < fibArray.length; i++) {
+    for ( var i =0; i < fibArray.length; i++ ) {
         useArray.push(parseInt(fibArray[i]))
     }
 
-    for ( var i = useArray.length; i<num; i ++) {
+    for ( var i = useArray.length; i<num; i ++ ) {
         useArray[i] = useArray[i -2] + useArray[i-1]
     }
 
     return useArray
 }
 
+// function to get subset of previously computed fibonacci sequence
 function fetchComputedFiboSequence(fibArray, num){
 
     var useArray = []
-    for ( var i =0; i < fibArray.length; i++) {
+    for ( var i =0; i < fibArray.length; i++ ) {
         useArray.push(parseInt(fibArray[i]))
     }
 
